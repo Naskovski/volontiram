@@ -1,0 +1,593 @@
+:root, :root.darkmode{
+  --short-side: 13rem;
+  --long-side: 27rem;
+  --middle-size: 22rem;
+  --background-color: #16001е;
+
+  --border-radius-s: 0.5rem;
+  --border-radius-l: 1.5rem;
+
+  --page-bg-plain: “16001е;
+
+  --card-bg: #ffffff00; /*TRANSPARENT*/
+  --info-color: rgba(69, 30, 61, 0.73);
+  --accent-color: #451e3d;
+  --accent-lighter: #c63664;
+  --text: #ffffff;
+  --input-bg: #19202675;
+  --btn-color: #6b6b6b;;
+  --btn-hover: #414a54;
+  --transp-divider: #FFFFFF3D;
+  --orange-accent: #ff9900;
+  --green-accent: #049b4b;
+  --header-bg: var(--card-bg);
+  --header-transp: #00000000;
+  --shadow: rgba(194, 194, 194, 0.2);
+
+  --icon: var(--accent-lighter);
+}
+
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--page-bg-plain);
+  background-position: center;
+  background-size: cover;
+  color: var(--text);
+}
+.float{
+  position: absolute;
+  float: left;
+}
+.container{
+  width: auto;
+}
+.noflex{
+  display: block;
+}
+.card, .bigCard, .popUpCard{
+  position: relative;
+  border-radius: var(--border-radius-l);
+  box-sizing: border-box;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  color: var(--text);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0.5rem;
+  max-width: 95vw;
+  max-height: 95vh;
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+.card:hover, .bigCard:hover{
+  transition: 0.3s;
+  box-shadow: var(--shadow) 0px 0px 8px 10px;
+}
+.bigCard{
+  width: 19rem;
+  height: calc(95vh - 10rem);
+  flex-direction: column;
+}
+.popUpCard{
+  width: 45rem;
+  height: 34rem;
+  flex-direction: column;
+  padding: 0;
+}
+.responsiveCard{
+  min-height: inherit;
+  height: auto;
+}
+.square{
+  flex-direction: column;
+  height: var(--short-side);
+  width: var(--short-side);
+  max-width: 50vw;
+  max-height: 50vw;
+}
+.squareEXTRA{
+  flex-direction: column;
+  height: var(--middle-size);
+  width: var(--middle-size);
+}
+.vertical{
+  flex-direction: column;
+  height: var(--long-side);
+  width: var(--short-side);
+}
+.horizontal{
+  flex-direction: row;
+  width: var(--long-side);
+  height: var(--short-side);
+  max-height: 50vw;
+}
+.flex_row, .flex_col{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 0.3s;
+}
+.flex_row{
+  flex-direction: row;
+}
+.flex_col{
+  flex-direction: column;
+}
+.hidden{
+  display: none;
+}
+.blur{
+  filter: blur(7px);
+  backdrop-filter: blur(6px);
+}
+.half_width{
+  width: 50%;
+  box-sizing: border-box;
+}
+.fullscreen{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.bottomCenter{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+}
+.card h1{
+  margin: 0;
+}
+.smallFont{
+  font-size: 0.94rem;
+}
+.smallIcon{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.menuIcon{
+  fill: var(--icon);
+}
+
+.tinyTxt{
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.scrollX{
+  overflow-x: scroll;
+}
+.scrollY{
+  overflow-y: scroll;
+}
+.logoSVG{
+  height: 2.5rem;
+  margin: 1.3em 0;
+  padding: 0 2rem;
+  fill: var(--text);
+}
+/*=================[INPUT and SELECT]===================*/
+input:not([type='radio']), select{
+  max-width: 100%;
+  width: 90%;
+  border-radius: var(--border-radius-s);
+  margin: 0.5rem;
+  line-height: 1.5;
+  height: 2.5rem;
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  border: 1px solid #00000000;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+input:hover, select:hover{
+  border: 1px solid var(--text);
+}
+select{
+  width: auto;
+}
+select option:before, select option:after{
+  border: 0;
+}
+select option{
+  border: 0;
+  background-color: var(--card-bg);
+}
+/* checkbox */
+
+.checkBT {
+  position: relative;
+  width: 10rem;
+  height: min-content;
+  margin: 0.3rem;
+  border: 1px solid var(--accent-color);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.checkBT > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  align-items: center;
+  line-height: 25px;
+  transition: .5s ease;
+  text-wrap: normal;
+  word-wrap: break-word;
+  border-radius: 1rem;
+}
+
+.checkBT input {
+  position: absolute;
+  padding: 1.5rem;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+input[type=checkbox]:hover ~ div {
+  background-color: var(--accent-lighter);
+  border-radius: 1rem;
+}
+
+input[type=checkbox]:checked ~ div {
+  background-color: var(--accent-color);
+  border-radius: 1rem;
+}
+
+
+/*==========================[ Buttons ]=========================*/
+button, .bt{
+  border: none;
+  border-radius: var(--border-radius-s);
+  vertical-align: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: 0.3s;
+  background-color: var(--btn-color);
+  color: var(--text);
+}
+.sq_button{
+  width: 2rem;
+}
+.button_logo{
+  width: 1.2rem;
+  height: 1.2rem;
+}
+button:hover, .bt:hover{
+  background-color: var(--btn-hover);
+}
+.rec_button{
+  width: 6rem;
+
+}
+.sq_button, .rec_button{
+  border: none;
+  margin: 0.5rem;
+  transition: 0.5s;
+  height: 2rem;
+}
+
+.round_button{
+  border: 0;
+  border-radius: 50%;
+}
+.round_button:hover{
+  background-color: var(--accent-lighter);
+}
+.transp_button{
+  background: none;
+}
+.transp_button:hover{
+  background: #ffffff22;
+}
+button:not(.bigCircBt) img{
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.bigCircBt{
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem;
+  background-color: var(--input-bg);
+  box-sizing: border-box;
+}
+.bigCircBt:hover{
+  background-color: var(--btn-hover);
+}
+.bigCircBt img, #spanBt img{
+  width: 75%;
+  height: 75%;
+}
+.huge_button{
+  width: 30rem;
+  max-width: 95%;
+  height: 3rem;
+}
+.smallBt, #CornerButton{
+  background: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+#CornerButton{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 5;
+}
+#CornerButton:hover, .smallBt:hover{
+  background-color: #ffffff22;
+  border-radius: 50%;
+  opacity: 1;
+}
+#CornerButton img, .smallBt img{
+  height: 1.2rem;
+  width: 1.2rem;
+  opacity: 0.5;
+}
+.editBt{
+  opacity: 0.3;
+  float: right;
+  right: 0;
+  top: 0;
+}
+/*==================*/
+.card_hd{
+  float: left;
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  margin-top: 0;
+  padding: 0;
+}
+
+@media (pointer: coarse){
+  .sq_button,  .round_button{
+    height: 5rem;
+  }
+
+  .rec_button{
+    height: 3.5rem;
+    min-width: 9rem;
+  }
+  .sq_button, .round_button{
+    width: 5rem;
+  }
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+}
+a:visited{
+  color: var(--text);
+}
+
+.App{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#Header{
+  float: top;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 5rem;
+  z-index: 6;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+}
+#Header > .logo{
+  height: 3rem;
+  vertical-align: middle;
+  transition: 0.3s;
+}
+
+#copyrightText{
+  z-index: 8;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#Header >h1{
+  padding-left: 2rem;
+  border-left: 1px solid var(--transp-divider);
+}
+/*===========================[ Animations ]======================*/
+@keyframes blinkBright {
+  25% {opacity: 0.8;}
+  50% {opacity: 1;}
+  60% { opacity: 0.7; }
+}
+@keyframes blinkDim {
+  0% {opacity: 0.3;}
+  50% {opacity: 0.5;}
+}
+
+@keyframes twist {
+  0% {transform: rotate(0deg);}
+  5% {transform: rotate(45deg);}
+  10% {transform: rotate(0deg);}
+  15% {transform: rotate(-45deg);}
+  20% {transform: rotate(0deg);}
+  100% {transform: rotate(0deg);}
+}
+@keyframes fade-in {
+  0%{ opacity: 0}
+  100%{ opacity: 1;}
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.fadeInANM{
+  animation: fade-in .3s;
+}
+.fadeOutANM{
+  animation: fade-out .3s;
+
+}
+/* */
+.horiz_gallery{
+  padding-left: 0.5rem;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  max-width: 100%;
+}
+.horiz_gallery > * {
+  display: block;
+  position: relative;
+}
+
+/*=============[REsponsive]================*/
+
+@media only screen and (max-width: 1400px) {
+  #dash{
+    max-width: calc(2*var(--long-side) + 2rem);
+  }
+}
+
+@media only screen and (max-width: 960px) {
+
+
+
+  .popUpCard button#CornerButton:not(.content > *){
+    top: 4rem;
+    right: 3rem;
+    min-height: 3rem;
+    min-width: 3rem;
+  }
+  .popUpCard button#CornerButton img{
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  :root{
+    --short-side: 11.7rem;
+  }
+  .square{
+    max-width: 45vw;
+  }
+  #dash{
+    width: var(--long-side);
+    max-width: 100vw;
+  }
+  .popUpCard{
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  #MenuBar{
+    justify-content: space-between;
+  }
+
+
+}
+
+/*====================[themes]=====================*/
+img.dark, .dark img{
+  display: none;
+}
+img.light, .light img{
+  display: flex;
+}
+
+html{
+  color-scheme: dark;
+}
+
+.light-mode{
+  color-scheme: light;
+}
+.light-mode .dark{
+  display: none;
+}
+.light-mode img.dark, .light-mode .dark img{
+  display: block;
+}
+.light-mode .light{
+  display: flex;
+}
+.light-mode img.light, .light-mode .light img{
+  display: none;
+}
+:root.light-mode {
+  --page-bg-plain: #ffffff;
+  --card-bg: #00000000;
+  --info-color: rgba(194, 178, 128, 0.73);
+  --accent-color: #c2b280;
+  --accent-lighter: #948b6f;
+  --water: #5abcd8;
+  --text: #2e382e;
+  --input-bg: #cce3de75;
+  --btn-color: #f8f8f8;;
+  --btn-hover: #bebebe;
+  --transp-divider: rgba(0, 0, 0, 0.24);
+  --orange-accent: #ffb94f;
+  --green-accent: #5ad895;
+  --shadow: rgba(87, 87, 87, 0.2);
+}
+
+/* New Additions */
+
+.menuBarSpacer{
+  display: block;
+  height: 6rem;
+}
+
+.center{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

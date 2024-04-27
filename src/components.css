@@ -1,0 +1,422 @@
+/*================================================*/
+.accent{
+    background-color: var(--accent-color);
+}
+.accent:hover{
+    background-color: var(--accent-lighter);
+    cursor: pointer;
+}
+.container{
+    /*text-align: center;*/
+}
+
+/*========================[ PROGRESS BAR ]============================*/
+.progressBar{
+    width: 86px;
+    height: 135px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    z-index: 1;
+    margin: 0.3rem;
+    display: block;
+    overflow: hidden;
+}
+.fill{
+    max-width: 100%;
+    max-height: 100%;
+    background-color: var(--water);
+    position: absolute;
+    bottom: 15px;
+    z-index: 2;
+    text-align: center;
+    margin: 0;
+    transition: 1s;
+}
+.pbChildren{
+    color: var(--text);
+    z-index: 5;
+    height: 100%;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+/*========================[ COUNTER ]============================*/
+#counter{
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    min-width: 50%;
+}
+#buttons{
+    margin: 1rem;
+}
+#counter h1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/*===================[ WATER INTAKE ]======================*/
+#WaterIntake{
+    text-align: center;
+}
+#glassContainer{
+    position: relative;
+}
+#glassContainer > img{
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    margin: 0;
+}
+/*========================[ LOGIN ]============================*/
+#LoginLogo{
+ width: 70%;
+    fill: var(--text);
+}
+#login p{
+    margin: 0;
+}
+#loginWrapper{
+    text-align: center;
+}
+
+#login div{
+ width: 100%;
+}
+#login h1, #login h2{
+    padding: 0;
+    margin: 0.5rem;
+}
+#inputFields{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+#home{
+    /*min-height: 100vh;*/
+    width: 60rem;
+    max-width: 90vw;
+    position: relative;
+    transition: 1s;
+}
+#dashWrapper{
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 5rem)
+}
+#login img[alt='Google Logo']{
+    margin-right: 0.5rem;
+}
+/*========[REGISTER & FORGOT PASSWORD]=============*/
+#Register img:not(#CornerButton img), #PasswordReset img:not(#CornerButton img){
+    width: 3rem;
+    height: 3rem;
+}
+/**===================[ Profile ]==========*/
+#Profile{
+    display: none;
+}
+#data>div{
+    margin: 0.5rem;
+}
+/**===================[ MoreInfo ]==========*/
+#MoreInfo{
+    text-align: center;
+    width: 60rem;
+    max-width: 95vw;
+}
+#MoreInfo button{
+    padding: 0.5rem;
+    width: 7rem;
+    margin: 0.5rem;
+    background-color: var(--accent-color);
+}
+#MoreInfo button:hover{
+    background-color: var(--accent-lighter);
+}
+#MoreInfo p.bottomCenter{
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+#MoreInfo p b{
+    font-size: 3rem;
+    color: var(--accent-color);
+    font-weight: bolder;
+}
+#MoreInfo img[alt='big logo']{
+    width: 5rem;
+    margin: 1rem;
+}
+#MoreInfo img[alt='small logo']{
+    width: 3rem;
+    margin: 1rem;
+}
+.flex_gallery{
+    width: 90%;
+    height: 25rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+}
+
+/*============[ History ]===================*/
+img[alt=clock]{
+    animation-name: twist;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+/*============[ Settings ]===================*/
+#Settings label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Settings label div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#Settings button:not(#CornerButton){
+    margin: 0.5rem;
+    width: 5rem;
+}
+
+#Settings button#Confirm, #Settings button#SettingsBtOS{
+    width: 11rem;
+}
+
+hr.divider{
+    width: 100%;
+    background-color: var(--transp-divider);
+}
+/*============[ ChangePassword ]===================*/
+#ChangePassword{
+    z-index: 9;
+}
+#ChangePassword #blurlayer{
+    background-color: rgba(0, 0, 0, 0.78);
+}
+#ChangePassword h1{
+    text-align: center;
+}
+/*==========[ MenuBar ]=======================*/
+#MenuBar{
+    height: 5rem;
+    width: 100%;
+    z-index: 4;
+    position: fixed;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90vw;
+    margin: 0.5rem 0;
+}
+/*=========[ CreateEvent ]============*/
+#eventDataInput{
+    margin: 0 auto;
+    width: 30rem;
+    max-width: 95vw;
+}
+#eventDataInput > button{
+    margin: 5px auto;
+}
+#eventDataInput select{
+    margin-left: 1rem;
+}
+
+/*=========[ EventCard ]============*/
+#eventCardContainer{
+    margin: 0 auto;
+    width: 20rem;
+    height: 35rem;
+    max-height: 90vh;
+    position: relative;
+}
+#home .eventCard{
+    position: absolute;
+    top: 0;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+}
+.eventCard section{
+    box-sizing: border-box;
+    padding: 1.5rem;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.eventCard .active{
+    /*height: 60%;*/
+}
+.eventCard .disabled{
+    /*height: 40%;*/
+    overflow: hidden;
+}
+.eventCard h1{
+    padding: 0 10%;
+    height: 3rem;
+    margin-bottom: 0;
+}
+.eventCard h3, .eventCard h2 {
+    margin: 0;
+}
+.eventCard h4{
+    font-weight: normal;
+    font-size: 1.7rem;
+    margin: 0;
+}
+.eventCard > .info {
+    height: 90%;
+    padding: 0.5rem 1rem;
+    background-color: var(--info-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+.eventCard > .participating{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    fill: #3eb489;
+}
+.info.active{
+    height: calc(100% - 11rem);
+    position: absolute;
+    transition: 1s;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.info.active::-webkit-scrollbar{
+    display: none;
+}
+
+.active:not(.info){
+    height: 60%;
+    transition: 1s;
+}
+.disabled:not(.info){
+    height: 8rem;
+    min-height: min-content;
+    transition: 1s;
+}
+/* Profile */
+#profile{
+    width: 60rem;
+    max-width: 90vw;
+    position: relative;
+    transition: 1s;
+    height: auto;
+}
+
+#profile #profilePhoto{
+    width: 10rem;
+    height: 10rem;
+    display: block;
+    border-radius: 50%;
+}
+
+#profile .eventCard{
+    height: 30rem;
+    overflow: hidden;
+    padding: 0;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+#nameRow{
+    padding: 3rem;
+}
+#nameRow > *{
+    display: block;
+    word-wrap: break-word;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.eventCard #participants{
+    padding: 1rem;
+
+}
+
+#profile .horiz_gallery p{
+    width: 100%;
+    text-align: center;
+}
+/* UserMiniDisplay */
+#smallDisplay {
+    width: 12rem;
+    height: 3rem;
+}
+
+
+#smallDisplay #profilePhoto{
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    border-radius: 50%;
+}
+
+
+
+/*RESPONSIVERESPONSIVERESPONSIVERESPONSIVE*/
+
+@media only screen and (orientation: portrait){
+    .bigCard{
+        margin: 0.5rem;
+        width: calc(90vw - 1rem);
+    }
+    #eventCardContainer{
+        width: 90vw;
+    }
+    #menuBar{
+        margin:0.5rem 0;
+    }
+}
+
+/* Message box*/
+#question{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#blurlayer{
+    z-index: 9;
+}
+#LoadingWheel{
+    z-index: 10;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #00000000;
+    border-top-color: var(--accent-lighter);
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
